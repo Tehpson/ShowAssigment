@@ -3,7 +3,8 @@
 In the project directory, you can run:
 
 ### `npm install`
-Installs all dependencies to be able to run app.
+Installs all dependencies to be able to run app. \
+If any error occur  after installation please restart your IDE.
 
 ### `npm start`
 
