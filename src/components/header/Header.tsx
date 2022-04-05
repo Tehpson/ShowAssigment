@@ -1,5 +1,5 @@
 import './Header.css'
-import { SearchBar } from '../searchBar/SearchBar'
+import { SearchBar } from './searchBar/SearchBar'
 
 export const Header = (props:{FetchData(value:string):void}) => {
     const {FetchData} = props
