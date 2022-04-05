@@ -1,38 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ShowAPI } from "../assets/API";
 import { IShow } from "../assets/Types";
+import { AxiosError } from 'axios'
+import { DetailBody } from "../components/detailbody/DetailBody";
 
 export const DetailedView = () => {
-  const [serverResponse, setServerResponse] = useState<any>()
-  const parser = new DOMParser();
-  const [summary, setSummary] = useState<any>()
+  const [show, setShow] = useState<IShow | null>(null)
+  const [error, setError] = useState<AxiosError | null>(null)
+  const params = useParams();
 
   useEffect(() => {
-    ShowAPI.get<IShow>(`/shows/${params.id}`)
+    ShowAPI.get(`shows/${params.id}`)
+      .then((res) => setShow(res.data))
+      .catch((error: AxiosError) => setError(error))
   }, [])
 
-  const FetchData = () => {
-
-
-
-    try {
-      if (params.id !== undefined) {
-        const { data } = await API.SearchByID(params.id)
-        setServerResponse(data)
-        console.log(data)
-        setSummary(parser.parseFromString(data.summary, "text/html"))
-      }
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
   return (
-    <div>DetailedView</div>
+    <>
+    <DetailBody/>
+    </>
   )
 }
-function useParams() {
-  throw new Error("Function not implemented.");
-}
-
