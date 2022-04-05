@@ -1,0 +1,17 @@
+.SearchBar{
+    display: flex;
+    width: 20vw;
+    margin: 0 auto;
+    margin: 0 auto;
+    border: solid black 1px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.SearchBox{
+    font-size: large;
+    width: 90%;
+    border:none;
+    border-right: solid black 1px;
+    margin-right: 3px;
+}
