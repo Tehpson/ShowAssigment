@@ -14,4 +14,14 @@
     border:none;
     border-right: solid black 1px;
     margin-right: 3px;
+} 
+@media(max-width:1600px) {
+    .SearchBar{
+        width: 50vw;
+    }
+}
+@media(max-width:800px) {
+    .SearchBar{
+        width: 93vw;
+    }
 }

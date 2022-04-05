@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { HomeView } from '../views/homeView/HomeView'
-import { DetailedView } from '../views/detailedView/DetailedView'
+import { HomeView } from '../views/HomeView'
+import { DetailedView } from '../views/DetailedView'
 
 export const Routing = () => {
     return (
