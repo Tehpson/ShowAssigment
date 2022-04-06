@@ -20,7 +20,7 @@ export const HomeBody = (props:{shows:IRootShowObject[]|null, error:AxiosError|n
                 <ShowCard key={shows.show.id} show={shows.show}/>
             )
             : //else show no result
-            <p className='HomeViewNoResult'>No Result found</p>
+            <p data-testid='homeNoRenaultFound' className='HomeViewNoResult'>No Result found</p>
         : // else show nothing
         <p className='HomeViewInitText'>Get started by searching for a show</p>
       }
