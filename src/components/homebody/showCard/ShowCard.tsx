@@ -7,7 +7,7 @@ export const ShowCard = (props:{show: IShow}) => {
     return (
         <Link key={show.id} to={`/${show.id}`}>
             <div className='CardWrapper'>
-                <img src={show.image.original} alt='Not found' className='CardImage' />
+                <img src={show.image?.original } alt='Image Not found' className='CardImage' />
                 <div className='CardRight'>
                     <p className='CardTitle'>{show.name}</p>
                     <p className='CardAired'>({show.premiered + ' - ' + show.ended})</p>
