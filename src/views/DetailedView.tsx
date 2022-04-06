@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { ShowAPI } from "../assets/API";
 import { IShow } from "../assets/Types";
 import { AxiosError } from 'axios'
-import { DetailBody } from "../components/detailedBody/detailed";
+import { DetailedBody } from "../components/detailedBody/DetailedBody";
 
 export const DetailedView = () => {
   const [show, setShow] = useState<IShow | null>(null)
@@ -16,9 +16,10 @@ export const DetailedView = () => {
       .catch((error: AxiosError) => setError(error))
   }, [])
 
+
   return (
     <>
-    <DetailBody/>
+      <DetailedBody show={show} error={error} />
     </>
   )
 }

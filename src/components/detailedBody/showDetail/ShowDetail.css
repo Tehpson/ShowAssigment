@@ -1,0 +1,29 @@
+.DetailedWrapper{
+    width: 80%;
+    margin:60px auto;
+    display: grid;
+    grid-template-columns: 33% 66%;
+
+}
+.DetailedImg{
+    width: 100%;
+}
+.DetailedRight{
+    padding-left: 10px;
+
+}
+
+@media(max-width:854px){
+    .DetailedWrapper{
+        width: 95%;
+    }
+}
+@media(max-width:600px){
+    .DetailedWrapper{
+        display: block;
+    }
+    .DetailedImg{
+        width: 50%;
+        margin: 0 auto;
+    }
+}

@@ -9,4 +9,7 @@ export interface IShow{
     name:string,
     premiered:string,
     ended:string,
+    language:string,
+    genres:[string],
+    summary:string
 }
