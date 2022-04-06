@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { IShow } from '../../assets/Types'
 import { Error } from './error/Error'
-import { ShowDetail } from './showDetail/ShowDetail'
+import { ShowDetail } from './showDetail/showDetail'
 import './DetailedBody.css'
 
 export const DetailedBody = (props: { show: IShow | null, error: AxiosError | null }) => {
